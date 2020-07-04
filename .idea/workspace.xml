@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a828de7-1e32-4724-baa2-bfe095caeccc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
+  <component name="ProjectId" id="1duoAYY6kgEArzY6h7qQPN1crbC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Harry/Bitbucket Repos/20200628 Repo/Provider Portal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a828de7-1e32-4724-baa2-bfe095caeccc" name="Default Changelist" comment="" />
+      <created>1593284195505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593284195505</updated>
+      <workItem from="1593284196636" duration="12608000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1349" y="672" key="#Custom_Plugin_Repositories" timestamp="1593452577022">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1349" y="672" key="#Custom_Plugin_Repositories/0.0.5120.1400@0.0.5120.1400" timestamp="1593452577022" />
+    <state x="1139" y="551" key="EditFileWatcherDialog" timestamp="1593452494557">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1139" y="551" key="EditFileWatcherDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1593452494557" />
+    <state x="2408" y="543" key="FileChooserDialogImpl" timestamp="1593400506749">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="2408" y="543" key="FileChooserDialogImpl/0.0.5120.1400@0.0.5120.1400" timestamp="1593400506749" />
+    <state x="971" y="418" key="SettingsEditor" timestamp="1593452588255">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="971" y="418" key="SettingsEditor/0.0.5120.1400@0.0.5120.1400" timestamp="1593452588255" />
+    <state x="2291" y="326" width="672" height="678" key="search.everywhere.popup" timestamp="1593802189325">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="2291" y="326" width="672" height="678" key="search.everywhere.popup/0.0.5120.1400@0.0.5120.1400" timestamp="1593802189325" />
+  </component>
+</project>
