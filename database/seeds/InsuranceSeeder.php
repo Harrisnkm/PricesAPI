@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ProcedureCodeSeeder extends Seeder
+class InsuranceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class ProcedureCodeSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\ProcedureCode::class, 100)->create();
+        factory(App\Insurance::class, 50)->create();
     }
 }

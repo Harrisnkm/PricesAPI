@@ -18,7 +18,7 @@ class CreateProcedureCodesTable extends Migration
             $table->string('cpt_code');
             $table->string('cpt_description');
             $table->integer('category');
-            $table->string('version');
+            $table->string('version')->default('CPT4');
             $table->boolean('is_active');
         });
     }
@@ -30,6 +30,8 @@ class CreateProcedureCodesTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('procedure_codes');
+
     }
 }
