@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/testapi', 'PatientController@search');
+Route::get('/testapi', 'PatientController@index');
+

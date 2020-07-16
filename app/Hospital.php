@@ -8,9 +8,10 @@ class Hospital extends Model
 {
     public $timestamps = false;
 
+
     //Prices at Hospitals
-    public function HospitalCommercialPrices(){
-        return $this->hasMany(HospitalCommercialPrice::class);
+    public function HospitalCommercialPrices($priceTable){
+        return $this->hasMany($priceTable)->all();
     }
 
     //Insurances taken at this hospital
