@@ -9,22 +9,31 @@ class Hospital extends Model
     public $timestamps = false;
 
 
-    //Prices at Hospitals
-    public function HospitalCommercialPrices($priceTable){
-        return $this->hasMany($priceTable)->all();
+    //procedure Code
+    public function procedure_codes()
+    {
+        return $this->hasManyThrough(ProcedureCode::class, HospitalCommercialPrice::class, 'hospital_id', 'id', 'id', 'procedure_code_id');
     }
 
-    //Insurances taken at this hospital
-    public function InsurancesTakenAtHospital(){
-        return $this->belongsToMany('App\Insurance', 'hospital_commercial_price', 'hospital_id', 'insurance_id');
+    //insurances
+    public function insurances()
+    {
+        return $this->hasManyThrough(Insurance::class, HospitalCommercialPrice::class, 'hospital_id', 'id', 'id', 'insurance_id');
     }
 
-    //Insurances at Hospitals (The insurances that hospitals take). One to Many relationship
-    //Access the Insurances a hospital takes by the Hospital Commercial price table
-    public function Ins(){
-
-        return $this->belongsToMany('App\Insurance', 'hospital_commercial_price', 'hospital_id', 'insurance_id')->using('App\HospitalCommercialPrice')->withPivot(['price', 'network_price']);
+    //hospital prices with insurances and procedure codes
+    public function hospitalPrices()
+    {
+        return $this->hasMany(HospitalCommercialPrice::class)->join('procedure_codes', 'hospital_commercial_price.procedure_code_id', '=', 'procedure_codes.id' )->join('insurances', 'hospital_commercial_price.insurance_id', '=', 'insurances.id' );
     }
+
+    //find hospitals by ZipCode
+    public function hospitalsByZip($zip)
+    {
+        return $this->where('zip', '=', $zip);
+    }
+
+
 
 
 }

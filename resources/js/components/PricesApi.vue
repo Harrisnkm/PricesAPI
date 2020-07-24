@@ -3,6 +3,23 @@
         <h1 class="text-4xl mb-10"> Prices API</h1>
         <form ref="pricesApiForm" class="w-5/6 mx-auto" @submit.prevent="getResults()">
             <div class="flex">
+                <label class="font-semibold"> Set Search Parameters:</label>
+                <div>
+                    <label class="font-semibold"> Set Search Mode:</label>
+                    <select name="searchMode" id="searchMode" @change="setSearchMode($event)">
+                        <option value="provider">Provider</option>
+                        <option value="patient">Patient</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="font-semibold"> Zip Code:</label>
+                    <input type="text" name="zip" v-model="apiForm.zip">
+                </div>
+            </div>
+
+
+
+            <div class="flex">
             <label class="font-semibold"> Set the Price Table Parameters:</label>
 
                 <div class="p-5 m-5">
@@ -24,6 +41,7 @@
 
 
             <div class="flex">
+                <label class="font-semibold"> Set Search Parameters:</label>
                 <div class="p-5 m-5">
                     <label class="font-semibold"> Select Hospital:</label>
                         <select v-model="apiForm.hospital" class="border-solid" name="hospital">
@@ -74,9 +92,12 @@
                     reimbursement: '',
                     hospital: '',
                     insurance: '',
-                    procedureCode: ''
+                    procedureCode: '',
+                    searchMode: 'provider',
+                    zip: ''
                 },
-                pricesResult: {}
+                pricesResult: {},
+
             }
 
         },
@@ -84,12 +105,17 @@
            getResults: async function(){
                let pricesData = await axios({
                   method: 'POST',
-                  url: '/testapi',
+                  url: this.apiForm.searchMode,
                   responseType: 'json',
                   data: this.apiForm
               })
-               this.pricesResults = pricesData.data;
+               console.log(pricesData.data);
+               this.pricesResult = pricesData.data;
+               console.log(this.pricesResult);
 
+            },
+            setSearchMode: function(searchModeParameter){
+                this.apiForm.searchMode = searchModeParameter.target.value
             }
         }
     }

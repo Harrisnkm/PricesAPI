@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Hospital;
+use App\Insurance;
+use App\ProcedureCode;
 use Illuminate\Http\Request;
 
 class EntityReimbursementPriceTableController extends Controller
@@ -14,9 +17,10 @@ class EntityReimbursementPriceTableController extends Controller
         {
         $this->ERPT = 'App\\'.$this->getERPT($request->entity, $request->reimbursement);
         }
-
+        phptrick
 
     }
+
 
     public function getERPT($entity, $reimbursement){
 

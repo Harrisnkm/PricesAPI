@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/testapi', 'PatientController@search');
-Route::get('/testapi', 'PatientController@index');
+Route::post('/patient', 'PatientController@search');
+Route::get('/patient', 'PatientController@index');
+Route::post('/provider', 'ProviderController@search');
+Route::get('/provider', 'ProviderController@index');
+
 
