@@ -19,5 +19,10 @@ class DatabaseSeeder extends Seeder
 
         //Create the Prices Records and use the Entity records to fill in
         $this->call(HospitalCommercialPriceSeeder::class);
+
+        //Seed Users and UserRoles Tables
+        $this->call(UserRoleSeeder::class);
+        $this->call(UserSeeder::class);
+
     }
 }
