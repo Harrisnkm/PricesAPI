@@ -23,3 +23,7 @@ Route::post('/provider', 'ProviderController@search');
 Route::get('/provider', 'ProviderController@index');
 
 
+/*User Routes*/
+Route::get('/users', 'UserController@index');
+Route::post('/users', 'UserController@store');
+Route:: get('/users/{user}', 'UserController@show');
