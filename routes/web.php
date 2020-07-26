@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,7 +26,12 @@ Route::post('/provider', 'ProviderController@search');
 Route::get('/provider', 'ProviderController@index');
 
 
+
 /*User Routes*/
 Route::get('/users', 'UserController@index');
 Route::post('/users', 'UserController@store');
-Route:: get('/users/{user}', 'UserController@show');
+Route:: get('/users/{user}', 'UserController@show')->middleware('auth');
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
