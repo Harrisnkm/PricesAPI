@@ -40,6 +40,11 @@ class UserController extends Controller
         //validate
         $request->validate(['role_id' => 'required']);
 
+        $user = User::find(auth()->id());
+        //check if the user has a 1 in role id
+        if($user->role_id != 1){
+            abort(403);
+        }
         //persist
         User::create($request->all());
     }
@@ -52,6 +57,10 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+        if(auth()->id() != $user->id){
+            abort(403);
+        }
+
         return view('users.show', compact('user'));
     }
 
