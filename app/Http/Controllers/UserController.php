@@ -25,7 +25,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::find(auth()->id());
+        if($user->role_id != 1){
+            abort(403);
+        }
+        return view('users.create');
     }
 
     /**

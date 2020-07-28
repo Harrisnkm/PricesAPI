@@ -87,5 +87,25 @@ class UserTest extends TestCase
 
     }
 
+    public function testAdminsCanAccessCreateView()
+    {
+
+        //be a user that is an admin
+        $this->be(User::where('role_id',1)->first());
+        //get the create view assert status 200
+        $this->get('/users/create')->assertStatus(200);
+    }
+
+    public function testNonAdminsCannotAccessCreateView()
+    {
+
+        //be a user that is not an admin
+        $this->be(User::where('role_id','!=', 1)->first());
+        //get the create view assert status 403
+        $this->get('/users/create')->assertStatus(403);
+    }
+
+
+
 
 }
